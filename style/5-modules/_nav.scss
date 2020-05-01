@@ -10,10 +10,21 @@
     right:0;
 
     background-color: $gray;
+
+    @media screen and (min-width:700px) {
+        display: flex;
+        position: initial;
+    }
 }
 
 .dropdown-toggler a{
     background: getImage('icons/icon-dropdown-arrow.svg') right 25px center no-repeat;
+}
+.dropdown-toggler{
+    position: relative;
+    &:hover .dropdown-menu{
+        display: block;
+    }
 }
 
 .nav-item{
@@ -27,14 +38,22 @@
         padding: 20px 43px;        
         display: block;
         font-size: 12px;
-        font-weight: 400;
         text-transform: uppercase;
     }
 }
 
 .dropdown-menu{
+    display:none;
     background-color: #fff;
     a{
         color:$gray;
+    }
+    @media screen and (min-width:700px) {
+        position: absolute;
+        padding: 30px 43px;
+        a{
+            padding: 0;
+            line-height: 2;
+        }
     }
 }

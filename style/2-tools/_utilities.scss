@@ -1,9 +1,37 @@
 .center-wrapper{
     max-width:1400px;
     margin:0 auto;
-    padding:0 30px;
 }
 
 .negative-padding{
     padding-left: 15px;
+}
+
+.page-content{
+    padding-bottom: 100px;
+    @media screen and (min-width:1000px){
+        padding-left: 40px;
+    }
+}
+.page-flex-container{
+    display: flex;
+}
+
+.page-padding{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.hero-bg-gray{
+    @media screen and (min-width:1400px){
+        height: 555px;
+        width: 100%;
+
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -10;
+
+        background-color: $gray;
+    }
 }

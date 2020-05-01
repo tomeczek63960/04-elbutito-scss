@@ -1,4 +1,4 @@
-.text, .table-description {
+.text, .page-aside .side-nav a, .table-description {
   color: #080407;
   line-height: 23px;
 }
@@ -10,12 +10,19 @@
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 900px) {
+  .heading-1, .heading-2, .footer-heading {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
 .heading-1, .heading-2 {
   font-family: 'Playfair Display', serif;
   color: #050203;
 }
 
-.btn, .table-size {
+.btn, .page-aside .side-nav a, .table-size {
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -118,11 +125,43 @@ body {
 .center-wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 30px;
 }
 
 .negative-padding {
   padding-left: 15px;
+}
+
+.page-content {
+  padding-bottom: 100px;
+}
+
+@media screen and (min-width: 1000px) {
+  .page-content {
+    padding-left: 40px;
+  }
+}
+
+.page-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-padding {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media screen and (min-width: 1400px) {
+  .hero-bg-gray {
+    height: 555px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background-color: #191c19;
+  }
 }
 
 .icon-phone {
@@ -223,6 +262,12 @@ body {
   bottom: 10px;
 }
 
+@media screen and (min-width: 700px) {
+  .bars {
+    display: none;
+  }
+}
+
 .btn-group {
   margin-top: 10px;
 }
@@ -260,6 +305,10 @@ body {
   color: #050203;
   font-size: 20px;
   line-height: 90px;
+}
+
+.text {
+  max-width: 800px;
 }
 
 .text p {
@@ -336,16 +385,70 @@ body {
   font-size: 48px;
 }
 
+@media screen and (min-width: 550px) {
+  .page-hero--title {
+    font-size: 65px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .page-hero--title {
+    font-size: 85px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-hero--title {
+    font-size: 100px;
+  }
+}
+
 .page-hero--subtitle {
   display: none;
   color: #ffffff;
   font-size: 30px;
   font-weight: 400;
-  line-height: 89.97px;
+  line-height: 60px;
+}
+
+@media screen and (min-width: 700px) {
+  .page-hero--subtitle {
+    display: block;
+  }
 }
 
 .page-aside {
   display: none;
+  width: 26%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-right: 1px solid #e3e3e3;
+}
+
+.page-aside .side-nav {
+  width: 90%;
+  margin-top: 50px;
+}
+
+.page-aside .side-nav a {
+  padding: 10px 0;
+  display: block;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 18px;
+}
+
+.page-aside .side-nav a:last-child {
+  border: none;
+}
+
+.page-aside .side-nav a:hover {
+  color: #86c878;
+}
+
+@media screen and (min-width: 1000px) {
+  .page-aside {
+    display: block;
+  }
 }
 
 .page-footer {
@@ -414,8 +517,25 @@ body {
   background-color: #191c19;
 }
 
+@media screen and (min-width: 700px) {
+  .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: initial;
+  }
+}
+
 .dropdown-toggler a {
   background: url("../assets/icons/icon-dropdown-arrow.svg") right 25px center no-repeat;
+}
+
+.dropdown-toggler {
+  position: relative;
+}
+
+.dropdown-toggler:hover .dropdown-menu {
+  display: block;
 }
 
 .nav-item {
@@ -430,16 +550,27 @@ body {
   padding: 20px 43px;
   display: block;
   font-size: 12px;
-  font-weight: 400;
   text-transform: uppercase;
 }
 
 .dropdown-menu {
+  display: none;
   background-color: #fff;
 }
 
 .dropdown-menu a {
   color: #191c19;
+}
+
+@media screen and (min-width: 700px) {
+  .dropdown-menu {
+    position: absolute;
+    padding: 30px 43px;
+  }
+  .dropdown-menu a {
+    padding: 0;
+    line-height: 2;
+  }
 }
 
 .table-size {
@@ -489,6 +620,18 @@ body {
   width: 50%;
 }
 
+@media screen and (min-width: 550px) {
+  .img-wrapper {
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .img-wrapper {
+    height: 300px;
+  }
+}
+
 .quote-section {
   margin-top: 50px;
   padding: 30px 0 40px;
@@ -498,7 +641,7 @@ body {
 }
 
 .quote-section .text {
-  margin-top: 20px;
+  margin: 20px auto 0;
 }
 
 .icon-quote {
@@ -520,6 +663,12 @@ body {
   color: white;
 }
 
+@media screen and (min-width: 700px) {
+  .green-section {
+    padding: 60px 50px;
+  }
+}
+
 .mt-2 {
   margin-top: 30px;
 }
@@ -532,6 +681,24 @@ body {
 .yt-video iframe {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (min-width: 550px) {
+  .yt-video {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .yt-video {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .yt-video {
+    height: 500px;
+  }
 }
 
 .question {

@@ -35,4 +35,8 @@
             bottom:10px;
         }
     }
+
+    @media screen and (min-width:700px) {
+        display: none;
+    }
 }

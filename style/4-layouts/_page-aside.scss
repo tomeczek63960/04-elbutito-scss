@@ -1,3 +1,32 @@
 .page-aside{
     display: none;
+
+    width:26%;
+    flex-shrink: 0;
+    border-right:1px solid $hr-bg;
+    
+    .side-nav{
+        width:90%;
+        margin-top:50px;
+
+        a{
+            @extend %text;
+            @extend %text-bold;
+            padding: 10px 0;
+            display: block;
+            border-bottom:1px solid $hr-bg;
+            font-size: 18px;
+            &:last-child{
+                border:none;
+            }
+
+            &:hover{
+                color:$green;
+            }
+        }
+    }
+
+    @media screen and (min-width:1000px){
+        display: block;
+    }
 }
