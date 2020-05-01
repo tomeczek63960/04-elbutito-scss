@@ -1,0 +1,40 @@
+.page-nav{
+    position: relative;
+}
+
+.navbar-nav{
+    display: none;
+
+    position: absolute;
+    top:100%;
+    right:0;
+
+    background-color: $gray;
+}
+
+.dropdown-toggler a{
+    background: getImage('icons/icon-dropdown-arrow.svg') right 25px center no-repeat;
+}
+
+.nav-item{
+    white-space: nowrap;
+
+    &>a{
+        color: #ffffff;
+    }
+
+    a{
+        padding: 20px 43px;        
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+.dropdown-menu{
+    background-color: #fff;
+    a{
+        color:$gray;
+    }
+}

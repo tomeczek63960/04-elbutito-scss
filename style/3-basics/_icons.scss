@@ -1,0 +1,59 @@
+// page bar icons
+.icon-phone{
+    @extend %icon-contact;
+    background-image: getImage('icons/icon-phone.svg');
+    
+    @media screen and (min-width:700px){
+        margin-right: 25px;
+    }
+}
+
+.icon-mail{
+    @extend %icon-contact;
+    background-image: getImage('icons/icon-mail.svg');
+}
+
+// page-logo icon
+.page-logo{
+    @extend %icon-text;
+    background-image: getImage('icons/page-logo.svg');
+
+    .page-footer &{
+        width: 102px;
+        height: 38px;
+
+        @media screen and (min-width:700px){            
+            width: 136px;
+            height: 45px;
+        }
+        @media screen and (min-width:1200px){            
+            width: 166px;
+            height: 62px;
+        }
+    }
+
+    .page-hero &{
+        width: 166px;
+        height: 62px;    
+    }
+}
+
+// social media
+$social-icons:(
+    'fb',
+    'twitter',
+    'in',
+    'google'
+);
+
+@each $icon in $social-icons{
+    .icon-#{$icon}{
+        @extend %icon-social-media;
+        background-image: getImage('icons/icon-#{$icon}.svg');
+    };
+};
+
+.icon-google{
+    height:20px;
+    width:20px;
+}

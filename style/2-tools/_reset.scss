@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+input,button,textarea,select{
+    outline:none;
+}
+button{
+    cursor: pointer;
+    border:none;
+}
+textarea{
+    resize:none;
+}
+
+nav{
+    ul,ol{
+        list-style: none;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.hr{
+    height: 1px;
+    background-color: $hr-bg;
+}

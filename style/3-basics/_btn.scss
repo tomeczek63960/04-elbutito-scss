@@ -1,0 +1,16 @@
+.btn-group{
+    margin-top: 10px;
+}
+
+.btn{
+    @extend %text-bold;
+
+    width: 250px;
+    height: 70px;
+    
+    font-size: 16px;
+    color:white;
+
+    background-color: $green;
+    border-radius:35px;
+}

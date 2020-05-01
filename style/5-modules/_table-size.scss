@@ -1,0 +1,37 @@
+// table-size
+.table-size{
+    @extend %negative-margin;
+    @extend %text-bold;
+    margin-top: 30px;
+
+    font-size: 12px;
+    text-align: center;
+
+    thead{
+        color:white;
+        tr{
+            background-color: $table-size-tr-bg;;
+        }
+    }
+    
+    tbody{
+        color:$text-color;
+    }
+
+    tr{
+        height: 50px;
+        border-bottom:1px solid  #c1c1c1;
+    }
+
+    .table-row-info{
+        background-color:  #f5f5f5;
+        text-align: center;
+        border:none;
+    }
+}
+
+.table-description{
+    @extend %text;
+    margin-top: 20px;
+    font-size: 10px;   
+}
