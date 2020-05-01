@@ -1,0 +1,15 @@
+.google-maps{
+    @extend %negative-margin;
+    height: 300px;
+    iframe{
+        height: 100%;
+        width: 100%;
+    }
+
+    @media screen and (min-width:700px){
+        height: 400px;
+    }
+    @media screen and (min-width:1200px){
+        height: 500px;
+    }
+}

@@ -1,16 +1,42 @@
 .btn-group{
     margin-top: 10px;
+    display: flex;
+    
+    .page-hero &{
+        justify-content: center;
+    }
+    .contact-form &{
+        margin-top: 35px;
+    }
 }
 
 .btn{
     @extend %text-bold;
-
+    margin-right: 20px;
+    margin-top: 10px;
     width: 250px;
     height: 70px;
     
     font-size: 16px;
-    color:white;
+    color:$green;
 
-    background-color: $green;
+    background-color: transparent;
+    border: 3px solid #71b862;
     border-radius:35px;
+    
+    &:hover{
+        background-color: $green;
+        color:$white;
+    }
+
+    .page-hero &{
+        background-color: $green;
+        color:$white;
+    }
+    .contact-form &:first-child{
+        display: none;
+        @media screen and (min-width:700px){
+            display: block;
+        }
+    }
 }

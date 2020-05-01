@@ -16,21 +16,21 @@
 
     <div class="hero-bg-gray"></div>
 
-    <div class="center-wrapper">
-        <div class="page-bar">
-            <p class="free-delivery"><span class="text-green"> Darmowa dostawa </span>od 200 pln</p>
+    <div class="page-bar center-wrapper page-padding">
+        <p class="free-delivery"><span class="text-green"> Darmowa dostawa </span>od 200 pln</p>
 
-            <div class="page-bar--contact">
-                <a href="tel:500333444" class='icon-phone'>500 333 444</a>
-                <a href="mailto:biuro@elbutito.com" class="icon-mail">biuro@elbutito.com</a>
-            </div>
+        <div class="page-bar--contact">
+            <a href="tel:500333444" class='icon-phone text-uppercase'>500 333 444</a>
+            <a href="mailto:biuro@elbutito.com" class="icon-mail">biuro@elbutito.com</a>
         </div>
+    </div>
 
-        <header class="page-hero">
-            <div class="page-hero--flex-container">
+    <div class="center-wrapper">
+        <header class="page-hero ">
+            <div class="page-hero--flex-container page-padding">
                 <a href="#" class="page-logo">Elbutito</a>
 
-                <nav class="page-navbar">
+                <nav class="page-nav">
                     <button class="bars">
                         <span class="bars-line"></span>
                     </button>
@@ -60,11 +60,12 @@
                 </div>
             </div>
         </header>
+    </div>
 
-
-        <div class="page-flex-container">
+    <div class="center-wrapper">
+        <div class="page-flex-container page-padding">
             <aside class="page-aside">
-                <div>
+                <div class="side-nav">
                     <a href="#contact-data">dane kontaktowe</a>
                     <a href="#contact-form">formularz kontaktowy</a>
                     <a href="#our-location">jak dojechać</a>
@@ -86,8 +87,8 @@
                         15-399 Białystok
                     </p>
                     <p>
-                        Infolinia: <span class="text-red"> (85) 123 123 123</span> <br>
-                        e-mail: <span class="text-green"> biuro@elbutito.eu</span>
+                        Infolinia: <span class="text-red text-bold"> (85) 123 123 123</span> <br>
+                        e-mail: <span class="text-green text-bold"> biuro@elbutito.eu</span>
                     </p>
 
                     <p class="text-bold">Zapraszamy codziennie od 8:00 do 17:00</p>
@@ -96,29 +97,31 @@
 
                 <h6 class="heading-2" id='contact-form'>formularz kontaktowy</h6>
 
-
-                <form>
+                <form class="contact-form" autocomplete="off">
                     <!-- field -->
                     <div class="form-field">
-                        <label for="contactform[name]" class="form-label required">imię i nazwisko</label>
+                        <label for="contactform[name]" class="form-label required">imię i nazwisko:</label>
                         <div class="inp-error-field">
-                            <input type="text" name="contactform[name]" id="contactform[name]" class="form-control">
+                            <input type="text" name="contactform[name]" id="contactform[name]" class="form-control"
+                                placeholder="John Doe">
                             <p class="error-field">testing-error</p>
                         </div>
                     </div>
                     <!-- field -->
                     <div class="form-field">
-                        <label for="contactform[email]" class="form-label required">E-mail</label>
+                        <label for="contactform[email]" class="form-label required">E-mail:</label>
                         <div class="inp-error-field">
-                            <input type="email" name="contactform[email]" id="contactform[email]" class="form-control">
+                            <input type="email" name="contactform[email]" id="contactform[email]" class="form-control"
+                                placeholder="testing@o2.pl">
                             <p class="error-field"></p>
                         </div>
                     </div>
                     <!-- field -->
                     <div class="form-field">
-                        <label for="contactform[contact-reason]" class="form-label required">Powód kontaktu</label>
+                        <label for="contactform[contact-reason]" class="form-label required">Powód kontaktu:</label>
                         <div class="inp-error-field">
-                            <select name="contactform[contact-reason]" id="contactform[contact-reason]">
+                            <select name="contactform[contact-reason]" class="form-control"
+                                id="contactform[contact-reason]">
                                 <option value="">wybierz</option>
                                 <option value="system-error">błąd systemu</option>
                                 <option value="services">usługi</option>
@@ -128,7 +131,7 @@
                     </div>
                     <!-- field -->
                     <div class="form-field">
-                        <p for="contactform[client]" class="form-label required">Czy jesteś naszym klientem</p>
+                        <p for="contactform[client]" class="form-label required">Czy jesteś naszym klientem:</p>
                         <div class="inp-error-field">
                             <div class="client-field">
                                 <input type="radio" name="contactform[client]" id="client-yes">
@@ -146,8 +149,8 @@
                         </div>
                     </div>
                     <!-- field -->
-                    <div class="form-field">
-                        <p for="contactform[client]" class="form-label required">Preferowany dzień kontaktu</p>
+                    <div class="form-field contact-day-field-wrapper">
+                        <p for="contactform[contactDay]" class="form-label required">Preferowany dzień kontaktu:</p>
                         <div class="inp-error-field">
                             <div class="contact-day-field">
                                 <!-- checkbox field -->
@@ -191,11 +194,11 @@
                         </div>
                     </div>
                     <!-- field -->
-                    <div class="form-field">
-                        <label for="contactform[email]" class="form-label required">wiadomość</label>
+                    <div class="form-field message-field">
+                        <label for="contactform[email]" class="form-label required">wiadomość:</label>
                         <div class="inp-error-field">
-                            <textarea name="contactform[message]" id="contactform[message]"
-                                class="area-control"></textarea>
+                            <textarea name="contactform[message]" class="form-control area-control"
+                                id="contactform[message]" class="area-control"></textarea>
                             <p class="error-field"></p>
                         </div>
                     </div>
@@ -203,7 +206,7 @@
                     <div class="form-field">
                         <p class="form-label"></p>
                         <div class="inp-error-field">
-                            <input type="checbkox" name="contactform[approval]" id="contactform[approval]">
+                            <input type="checkbox" name="contactform[approval]" id="contactform[approval]">
                             <label for="contactform[approval]">
                                 <span class="checkbox-styled"></span>
                                 Zgadzam się z regulaminem serwisu
@@ -218,11 +221,12 @@
 
                 </form>
 
-
-                <h6 class="heading-2" id="oru-location">jak do nas dojechać</h6>
+                <h6 class="heading-2" id="our-location">jak do nas dojechać</h6>
 
                 <div class="google-maps">
-                    <!-- <iframe src="" frameborder="0"></iframe> -->
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81912.12948216933!2d18.154816061155188!3d50.090891619000274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471142a00b5a9681%3A0x58b0ab0b3bb7cc74!2zUmFjaWLDs3J6!5e0!3m2!1spl!2spl!4v1588357953369!5m2!1spl!2spl"></iframe>
                 </div>
 
 
@@ -230,11 +234,11 @@
 
 
         </div>
-
     </div>
 
-    <footer class="page-fooeter">
-        <div class="center-wrapper">
+
+    <footer class="page-footer">
+        <div class="center-wrapper page-padding">
             <div class="page-footer--flex-container">
                 <div class="footer-col">
                     <h6 class="footer-heading">Informacje</h6>
@@ -247,7 +251,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h6 class="footer-heading"></h6>
+                    <h6 class="footer-heading text-indent">services</h6>
 
                     <div class="footer-text">
                         <a href="#">Jak zamawiać </a>
@@ -277,8 +281,12 @@
             </div>
         </div>
         <div class="page-footer-bar">
-            <a href="#" class="page-logo">Elbutito</a>
-            <p class="copyright">Copyright &copy; 2018</p>
+            <div class="center-wrapper">
+                <div class="page-footer-bar-flex-container">
+                    <a href="#" class="page-logo">Elbutito</a>
+                    <p class="copyright">Copyright &copy; 2018</p>
+                </div>
+            </div>
         </div>
 
     </footer>

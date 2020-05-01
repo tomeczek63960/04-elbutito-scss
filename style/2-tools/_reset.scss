@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
-input,button,textarea,select{
+input,button,textarea,select,iframe{
     outline:none;
 }
-button{
+input[type=checkbox],input[type=radio]{
+    display: none;
+}
+button,iframe{
     cursor: pointer;
     border:none;
 }

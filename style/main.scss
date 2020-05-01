@@ -17,6 +17,7 @@
 @import './3-basics/btn';
 @import './3-basics/heading';
 @import './3-basics/text';
+@import './3-basics/input';
 
 // 0 - 4 layouts
 @import './4-layouts/page-bar';
@@ -27,6 +28,8 @@
 // 0 - 5 modules
 @import './5-modules/nav';
 @import './5-modules/table-size';
+@import './5-modules/form';
 
 // 0 - 6 pages
 @import './6-pages/about';
+@import './6-pages/contact';
