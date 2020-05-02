@@ -18,7 +18,7 @@
     @extend %icon-text;
     background-image: getImage('icons/page-logo.svg');
 
-    .page-footer &{
+     &--sm{
         width: 102px;
         height: 38px;
 

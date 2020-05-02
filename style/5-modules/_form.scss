@@ -1,59 +1,62 @@
 .contact-form{
     margin-top: 30px;
 }
-
-//fields
-.inp-error-field{
-    width: 100%;;
-}
-
 .form-field{
     margin-top: 15px;
+
+    // wrappers
+    &--client{
+        margin-top: 10px;
+        @media screen and (min-width:700px){
+            margin-top: 0;
+        }
+    }
+    &--contact-day--wrapper{
+        margin-top: 30px;
+    }
+    &--contact-day{
+        margin-top: 10px;
+        max-width:300px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(2 ,1fr);
+        gap: 10px;
+    }
+    &--message{
+        margin-top: 30px;
+    }
+    
     @media screen and (min-width:700px){
         display: flex;
     }
-}
-.client-field{
-    margin-top: 10px;
-    @media screen and (min-width:700px){
-        margin-top: 0;
-    }
-}
-.contact-day-field-wrapper{
-    margin-top: 30px;
-}
-.contact-day-field{
-    margin-top: 10px;
-    max-width:300px;
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(2 ,1fr);
-    gap: 10px;
-}
-.message-field{
-    margin-top: 30px;
-}
 
-// /labels
-.form-label{
-    @extend %text;
-    &.required::after{
-        content:'*';
+    // wrapper for input and error
+    &__data-wrapper{
+        width: 100%;;
     }
 
-    @media screen and (min-width:700px){
-        width:250px;
-        flex-shrink:0;
+    // /labels
+    &__label{
+        @extend %text;
+        &.required::after{
+            content:'*';
+        }
+    
+        &--light{
+            @extend %text;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+    
+        @media screen and (min-width:700px){
+            width:250px;
+            flex-shrink:0;
+        }
     }
-}
-.form-label--light{
-    @extend %text;
-    margin-right: 20px;
-    font-size: 16px;
-}
-
-.error-field{
-    color:$red;
-    font-size: 12px;
-    line-height: 2;
+    
+    &__error{
+        color:$red;
+        font-size: 12px;
+        line-height: 2;
+    }
 }

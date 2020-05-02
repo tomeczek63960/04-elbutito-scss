@@ -2,28 +2,28 @@
     @extend %flex-between;
     background-color: #ffffff;
 
-    a,.free-delivery{
+    a,&__free-delivery{
         color: $black;
         font-size: 14px;
         font-weight: 700;
     }
-}
 
-.free-delivery{
-    display: none;
-    white-space: nowrap;
-
-    @media screen and (min-width:700px){
-        display: block;
+    &__free-delivery{
+        display: none;
+        white-space: nowrap;
+    
+        @media screen and (min-width:700px){
+            display: block;
+        }
     }
-}
 
-.page-bar--contact{
-    @extend %flex-between;
-    height: 79px;
-    width: 100%;
-
-    @media screen and (min-width:700px){
-        justify-content: flex-end;
+    &__contact{
+        @extend %flex-between;
+        height: 79px;
+        width: 100%;
+    
+        @media screen and (min-width:700px){
+            justify-content: flex-end;
+        }
     }
 }

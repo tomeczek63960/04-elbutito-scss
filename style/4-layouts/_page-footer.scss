@@ -2,7 +2,7 @@
     background-color: $gray;
 }
 
-.page-footer--flex-container{
+.page-footer__flex-container{
     padding: 30px 0  40px;
     
     display: flex; 
@@ -10,18 +10,18 @@
     justify-content: space-between;
     max-width:850px;
 }
-.footer-col{
+.page-footer__col{
     width: 50%;
     max-width:160px;
 }
 
-.footer-heading{
+.page-footer__heading{
     @extend %heading-text;
     font-size: 18px;
     color:$green;
 
 }
-.footer-text a{
+.page-footer__text a{
     display: block;
     color: #6b6d6b;
     font-size: 14px;
@@ -32,11 +32,11 @@
     }
 }
 
-.page-footer-bar{
+.page-footer__bar{
     padding: 25px;
     border-top: 1px solid #303430;
 }
-.page-footer-bar-flex-container{
+.page-footer__bar-flex-container{
     @extend %flex-between;    
     max-width:400px;
 }

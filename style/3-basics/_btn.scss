@@ -22,27 +22,32 @@
     height: 70px;
     
     font-size: 16px;
-    color:$green;
-
-    background-color: transparent;
-    border: 3px solid #71b862;
+   
+    border: 3px solid $btn-border;
     border-radius:35px;
     
-    &:hover{
+    &--solid{
         background-color: $green;
         color:$white;
     }
 
-    .page-hero &{
-        background-color: $green;
-        color:$white;
+    &--outline{
+        color:$green;
+        background-color: transparent;
+
+        &:hover{
+            background-color: $green;
+            color:$white;
+        }
     }
-    .contact-form &:first-child{
+
+    &--md{
         display: none;
         @media screen and (min-width:700px){
             display: block;
         }
     }
+
 }
 
 .product-btn{

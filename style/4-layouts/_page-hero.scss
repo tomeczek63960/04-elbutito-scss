@@ -1,44 +1,43 @@
 .page-hero{
     @extend %img-cover-bg;
     padding: 30px 0 100px;
-
     background-image: getImage('page-hero-img.png');
-}
 
-.page-hero--flex-container{
-    @extend %flex-between;
-}
+    // containers
+    &__flex-container{
+        @extend %flex-between;
+    }
+    &__content{
+        margin-top: 100px;
+        text-align: center;
+        color:$white;
+    }
 
-.page-hero--content{
-    margin-top: 100px;
-    text-align: center;
-    color:$white;
-}
-
-.page-hero--title{
-    font-family: "Playfair Display";
-    font-size: 48px;
+    // texts 
+    &__title{
+        font-family: "Playfair Display";
+        font-size: 48px;
+        
+        @media screen and (min-width:550px){
+            font-size: 65px;
+        }
+        @media screen and (min-width:900px){
+            font-size: 85px;
+        }
+        @media screen and (min-width:1200px){
+            font-size: 100px;
+        }
+    }
+    &__subtitle{
+        display: none;
     
-    @media screen and (min-width:550px){
-        font-size: 65px;
-    }
-    @media screen and (min-width:900px){
-        font-size: 85px;
-    }
-    @media screen and (min-width:1200px){
-        font-size: 100px;
-    }
-}
-
-.page-hero--subtitle{
-    display: none;
-
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 60px;
-
-    @media screen and (min-width:700px){
-        display: block;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 60px;
+    
+        @media screen and (min-width:700px){
+            display: block;
+        }
     }
 }

@@ -1,4 +1,4 @@
-.form-control{
+.form-field__control{
     margin-top: 9px;
     padding: 0 15px;
     max-width: 410px;
@@ -19,49 +19,50 @@
     @media screen and (min-width:700px){
         margin-top: 0;
     }
-}
-.area-control{
-    padding: 15px;
-    resize: none;
-    height: 205px;
-}
 
-.checkbox-styled,.radio-styled{
-    margin-right: 5px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    position:relative;
-
-    border:1px solid $light-gray-2;
-    background-color: transparent;
-    vertical-align: middle;
-
-    &::after{
-        content:"";
-        display: none;
-        width:8px;
-        height: 8px;
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%);
-
-        
-        background-color: $green;
+    &--large{
+        padding: 15px;
+        resize: none;
+        height: 205px;
     }
-}
 
-.radio-styled{
-    border-radius:50%;
-    &::after{
+    &--checkbox,&--radio{
+        margin-right: 5px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position:relative;
+    
+        border:1px solid $light-gray-2;
+        background-color: transparent;
+        vertical-align: middle;
+    
+        &::after{
+            content:"";
+            display: none;
+            width:8px;
+            height: 8px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+    
+            
+            background-color: $green;
+        }
+    }
+
+    &--radio{
         border-radius:50%;
+        &::after{
+            border-radius:50%;
+        }
     }
 }
 
-input[type=checkbox]:checked + label .checkbox-styled::after{
+input[type=checkbox]:checked + label .form-field__control--checkbox::after{
     display: block;
 }
-input[type=radio]:checked + label .radio-styled::after{
+input[type=radio]:checked + label .form-field__control--radio::after{
     display: block;
 }

@@ -7,23 +7,24 @@
             margin-top: 0;
         }
     }
+
+    &--uppercase{
+        text-transform: uppercase;
+    }
+    
+    &--bold{
+        font-weight: bold;
+    }
+    
+    &--green{
+        color:$green;
+    }
+    &--red{
+        color:$red;
+    }
+    
+    &--indent{
+        text-indent: -9999px;
+    }
 }
 
-.text-uppercase{
-    text-transform: uppercase;
-}
-
-.text-bold{
-    font-weight: bold;
-}
-
-.text-green{
-    color:$green;
-}
-.text-red{
-    color:$red;
-}
-
-.text-indent{
-    text-indent: -9999px;
-}
